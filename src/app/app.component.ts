@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-app';
-  public app_name1 = 'new name1';
-  public app_name2 = 'new name2';
+  app_name1 = 'new name1';
+  app_name2 = 'new name2';
+  message = '';
 }

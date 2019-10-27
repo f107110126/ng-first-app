@@ -7,9 +7,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  @Input() tapp_name1;
-  @Input('tapp_name2') newname2;
-  @Output() childEvent = new EventEmitter();
   fireEvent() {
     this.childEvent.emit('hello event is fired.');
     console.log('done');
@@ -18,7 +15,16 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @Input() tapp_name1;
+  @Input('tapp_name2') newname2;
+  @Output() childEvent = new EventEmitter();
+  sampleString = 'Hellow everybody this is a sample string.';
+  sampleUser = {
+    name: 'John',
+    age: 23,
+    gender: 'male'
+  }
+  sampleDate = new Date();
   isDisplay = false;
   color = 'none';
   colors = ['red', 'yello', 'green', 'blud'];

@@ -1,4 +1,25 @@
 <div class="main">
+    <h1>Pipes</h1>
+    <div class="pipes">
+        <h3>{{sampleString}}</h3>
+        <h3>{{sampleString|lowercase}}</h3>
+        <h3>{{sampleString|uppercase}}</h3>
+        <h3>{{sampleString|titlecase}}</h3>
+        <h3>{{sampleString|slice:3}}</h3>
+        <h3>{{sampleString|slice:3:-3}}</h3>
+        <h3>{{sampleUser|json}}</h3>
+        <h3>{{5.678|number:'1.2-3'}}</h3>
+        <h3>{{5.678|number:'3.4-5'}}</h3>
+        <h3>{{5.678|number:'3.1-2'}}</h3>
+        <h3>{{0.25|percent}}</h3>
+        <h3>{{0.25|currency}}</h3>
+        <h3>{{0.25|currency:'GBP'}}</h3>
+        <h3>{{0.25|currency:'GBP':'CODE'}}</h3>
+        <h3>{{sampleDate}}</h3>
+        <h3>{{sampleDate|date:'short'}}</h3>
+        <h3>{{sampleDate|date:'shortDate'}}</h3>
+        <h3>{{sampleDate|date:'shortTime'}}</h3>
+    </div>
     <h1>{{ "Welcome to " + tapp_name1 }}</h1>
     <h1>{{ "Welcome to " + newname2 }}</h1>
     <button (click)='fireEvent()'>Send Event</button>
