@@ -1,6 +1,23 @@
-<p>test works!</p>
-<p>hello {{ name }}</p>
-<p>{{ greetUser() }}</p>
-<!-- <p>{{ console.log('here can\'t execute javascript.') }}</p> -->
-<p>{{ attrfromjs }}</p>
-<p>{{ print2log('hello') }}</p>
+<div class="main">
+    <h1>Welcome to {{ app.name }} </h1>
+    <div class="content">
+        <input type="text" [value]="value1">
+        <input type="text" value="{{value2}}">
+        <input [disabled]="isDisabled1" type="text">
+        <input [disabled]="isDisabled2" type="text">
+        <input bind-disabled="isDisabled3" type="text">
+        <h2 [class]="successClass">success</h2>
+        <h2 class="text-special" [class]="successClass">two class test</h2>
+        <h2 class="text-special" [class.text-danger]="hasError">danger test</h2>
+        <h2 [ngClass]="messageClasses">sample things for ngobj</h2>
+        <h2 [style.color]="hasError ? 'red' : 'green'">string with error</h2>
+        <h2 [style.color]="highlightColor">string with highlight</h2>
+        <h2 [ngStyle]="titleStyles">Binding sample 3</h2>
+        <button (click)="clickHandler($event)">Greeting</button>
+        <button (click)="greeting='hello fucker.'">Greeting</button>
+        <input #myInput type="text">
+        <button (click)="logMessage(myInput.value)">log</button>
+        <button (click)="logMessage(myInput)">log2</button>
+        {{greeting}}
+    </div>
+</div>
