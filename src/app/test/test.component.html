@@ -19,5 +19,7 @@
         <button (click)="logMessage(myInput.value)">log</button>
         <button (click)="logMessage(myInput)">log2</button>
         {{greeting}}
+        <input [(ngModel)]="username" type="text">
+        {{username}}
     </div>
 </div>
