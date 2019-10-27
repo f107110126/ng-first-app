@@ -15,6 +15,6 @@ import { TestComponent } from './test/test.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [TestComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

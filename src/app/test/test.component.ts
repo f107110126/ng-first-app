@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -7,11 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  @Input() tapp_name1;
+  @Input('tapp_name2') newname2;
+  @Output() childEvent = new EventEmitter();
+  fireEvent() {
+    this.childEvent.emit('hello event is fired.');
+    console.log('done');
+  }
   constructor() { }
 
   ngOnInit() {
   }
 
+  isDisplay = false;
+  color = 'none';
+  colors = ['red', 'yello', 'green', 'blud'];
   name = 'Andy';
   value1 = 'sample1';
   value2 = 'sample2';

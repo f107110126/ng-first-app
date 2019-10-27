@@ -1,6 +1,24 @@
 <div class="main">
-    <h1>Welcome to {{ app.name }} </h1>
+    <h1>{{ "Welcome to " + tapp_name1 }}</h1>
+    <h1>{{ "Welcome to " + newname2 }}</h1>
+    <button (click)='fireEvent()'>Send Event</button>
     <div class="content">
+        <h2 *ngIf='isDisplay; else elseBlock'>sample for *ngIf</h2>
+        <ng-template #elseBlock>
+            <h2>simple *ngIf is been hidden</h2>
+        </ng-template>
+        <div *ngIf='isDisplay; then thenBlock2; else elseBlock2'></div>
+        <ng-template #thenBlock2><h2>this is then block2.</h2></ng-template>
+        <ng-template #elseBlock2><h2>this is else block2.</h2></ng-template>
+        <div [ngSwitch]='color'>
+            <div *ngSwitchCase="'red'">You picked red.</div>
+            <div *ngSwitchCase="'blue'">You picked blue.</div>
+            <div *ngSwitchCase="'green'">You picked green.</div>
+            <div *ngSwitchDefault>This is the default selection.</div>
+        </div>
+        <div *ngFor='let color of colors; index as i; first as f; last as l; odd as o; even as e'>
+            <h2>{{f}}&nbsp;{{l}}&nbsp;{{e}}&nbsp;{{o}}&nbsp;{{i}}&nbsp;{{ color }}</h2>
+        </div>
         <input type="text" [value]="value1">
         <input type="text" value="{{value2}}">
         <input [disabled]="isDisabled1" type="text">
